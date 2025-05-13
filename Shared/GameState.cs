@@ -15,6 +15,9 @@ public class GameState
     }
 
     public void ProcessEvent(GameEvent gameEvent) {
+        
+        GameEvents.Add(gameEvent);
+
         if (gameEvent is GameCreatedEvent gameCreatedEvent) {
             GameId = gameCreatedEvent.GameId;
         }

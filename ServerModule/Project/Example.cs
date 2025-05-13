@@ -75,7 +75,7 @@ public class MyModule
         var results = response.Data.Results;
         var item = results.First(r => r.Key == "GameState");
         
-        //_logger.LogInformation("CloudSaveData returned {gameStateJson}", gameStateJson);
+        _logger.LogInformation("Load data returned {gameStateJson}", item.Value.ToString());
 
         // 2. -----  Deserialize the game state -----
         /// ERROR HAPPENS HERE
