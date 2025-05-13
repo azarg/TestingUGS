@@ -4,10 +4,15 @@ namespace HelloWorld;
 
 public class MyModule
 {
-    [CloudCodeFunction("SayHello")]
-    public string Hello(string name)
+    [CloudCodeFunction("SaveGameState")]
+    public string SaveGameState()
     {
-        return $"Hello, {name}!";
+        return $"Saved";
+    }
+
+    [CloudCodeFunction("GetGameState")]
+    public string GetGameState() {
+        return $"GameState";
     }
 }
 
