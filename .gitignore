@@ -73,3 +73,5 @@ crashlytics-build.properties
 
 /ServerModule/Project/bin
 /ServerModule/Project/obj
+/Shared/bin
+/Shared/obj
