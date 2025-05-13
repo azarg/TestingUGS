@@ -13,23 +13,24 @@ namespace Unity.Services.CloudCode.GeneratedBindings
             k_Service = service;
         }
 
-        public async Task<string> SaveGameState()
+        public async Task<string> CreateGame()
         {
             return await k_Service.CallModuleEndpointAsync<string>(
                 "ServerModule",
-                "SaveGameState",
+                "CreateGame",
                 new Dictionary<string, object>()
                 {
                 });
         }
 
-        public async Task<string> GetGameState()
+        public async Task<string> PlayTurn(string gameId)
         {
             return await k_Service.CallModuleEndpointAsync<string>(
                 "ServerModule",
-                "GetGameState",
+                "PlayTurn",
                 new Dictionary<string, object>()
                 {
+                    {"gameId", gameId},
                 });
         }
     }
